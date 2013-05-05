@@ -83,7 +83,6 @@ def main(jsonInputForMultiplier, jsonInputFileForVectors, jsonShopInfo, outputFi
     maxPopularity = 1
     for shop in shopDetails:
         currPop = shopDetails[shop][0]["num_favorers"]
-        print shopDetails[shop]
         if currPop > maxPopularity:
             maxPopularity = currPop
     #max seems to be ~170 for my data    
@@ -104,13 +103,6 @@ def main(jsonInputForMultiplier, jsonInputFileForVectors, jsonShopInfo, outputFi
     
     #now remove duplicates
     shopNames = set(shopNamesNotSet)
-
-    #check to see if user provided a shopName to find distances, else select random
-    #if originalShop == "":
-    #    originalShop= random.sample(shopNames,1)[0]
-    #elif originalShop not in shopNames:
-    #    print "You specified a shop that is not in the dataset, please check your shopname."
-    #    sys.exit(1)
 
     outputFile = open(outputFileName, 'wb')
     for originalShop in shopNames:
@@ -143,12 +135,7 @@ def main(jsonInputForMultiplier, jsonInputFileForVectors, jsonShopInfo, outputFi
         for i in range(1,nSimilarStores):
             stringToPrint += ", " + sortedDist[i][0]
         stringToPrint += "\n"
-
         outputFile.write(stringToPrint)
-
-        #print out the string starting with original store then : then nSimilarStores number of similar stores
-        #print stringToPrint
-
     outputFile.close()
 
 def usage():

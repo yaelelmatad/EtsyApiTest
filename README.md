@@ -34,3 +34,14 @@ $ python findSimilarShopsAllShops.py multiplier.json vectors.json similarShops.d
 ```
 I have included my ```shopListingData.json, multipliers.json, vectors.json, ``` and ```similarShops.dat``` in this repository.  
 
+I have further included another script which calls the API to get store specific date about the stores in the shopListingData.json file.  That routine calls the API and gets the shop info.  It outputs the store data to a file called shopData.json.  It can be called as follows:
+```bash
+$ python getShopsShopInfo.py shopListingData.json shopData.json
+```
+I have also written another routine which reduces the apparent vector distance between two shops if the comparison ship is more popular (has more favorers).  The maximum bonus is about 20% of the vector distance with most shops getting almost no bonus at all.  To run that script use:
+```bash
+$ python findSimilarShopsALlShops.py multiplier.json vectors.json storeData.json similarShopsByPopularity.dat
+```
+
+I have further included ```storeData.json, ``` and ```similarShopsByPopularity.dat``` with this repository.
+
