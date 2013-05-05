@@ -6,7 +6,7 @@ import random
 
 #hard coded number of similar stores to spit out since HW said 5, could always add to command line
 nSimilarStores = 5
-maxBonus = 0.01
+maxBonus = 0.0005
 
 
 class vectors:
