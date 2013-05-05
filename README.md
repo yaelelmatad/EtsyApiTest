@@ -34,7 +34,7 @@ $ python findSimilarShopsAllShops.py multiplier.json vectors.json similarShops.d
 ```
 I have included my ```shopListingData.json, multipliers.json, vectors.json, ``` and ```similarShops.dat``` in this repository.  
 
-I have further included another script which calls the API to get store specific date about the stores in the shopListingData.json file.  That routine calls the API and gets the shop info.  It outputs the store data to a file called shopData.json.  It can be called as follows:
+I have further included another script which calls the API to get store specific data about the stores in the shopListingData.json file.  That routine calls the API and gets the shop info.  It outputs the store data to a file called shopData.json.  It can be called as follows:
 ```bash
 $ python getShopsShopInfo.py shopListingData.json shopData.json
 ```
