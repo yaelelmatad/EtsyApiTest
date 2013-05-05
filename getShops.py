@@ -1,11 +1,11 @@
-from etsy import Etsy, EtsyEnvProduction
+from etsy import Etsy, EtsyEnvProduction, EtsyEnvSandbox
 import json
 import sys
 import time
 
 def main(goalNumShops, jsonListingOutput):
     '''simple script to find goalNumShops number of shops from the etsy API, outputs shop listing data in json format'''
-    api = Etsy('6hy9gw6rl7wbi4yklg3ezfx6', etsy_env=EtsyEnvProduction())
+    api = Etsy('6hy9gw6rl7wbi4yklg3ezfx6', etsy_env=EtsyEnvSandbox())
     myNumShops = 0
 
     myShops = [] #list of shops
@@ -13,8 +13,8 @@ def main(goalNumShops, jsonListingOutput):
     arbitraryOffset = 50 #for changing offset later
     currShopNames = {}
     while len(myShops) < goalNumShops:
-        print 5000-currOffset, len(myShops)
-        getMoreStores = api.findAllShops(limit=100, offset=(5000-currOffset)) #this api call maxes out at 100.
+        print currOffset, len(myShops)
+        getMoreStores = api.findAllShops(limit=100, offset=(currOffset)) #this api call maxes out at 100.
         for shop in getMoreStores:
             if shop['shop_name']:
                 myShops.append(shop)
