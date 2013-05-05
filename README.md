@@ -24,9 +24,9 @@ Or (with known store name):
 ```bash
 $ python findSimilarShops.py multipliers.json vectors.json VintageIngenue
 ```
-In either case Output appears as:
+In either case Output appears in standard out as (or can be > to a file):
 ```bash
-$ OriginalStore: SimilarStore1 SimilarStore2 SimilarStore3 SimilarStore4 SimilarStore5
+$ OriginalStore: SimilarStore1, SimilarStore2, SimilarStore3, SimilarStore4, SimilarStore5
 ```
 Another version of this code loops over all the stores and produces an output file with all the shops.  To run it use:
 ```bash
