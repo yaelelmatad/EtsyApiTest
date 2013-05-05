@@ -3,7 +3,7 @@ EtsyApiTest
 
 Project which uses API to grab a bunch of etsy stores and then uses a simple analysis to compare similarity and group similar stores.
 
-There are three main codes in this directory.  The first one is getShops.py.  This one should be run as:
+There are several codes in this directory.  The first one is getShops.py.  This one should be run as:
 
 ```bash
 $ python getShops.py 5000 shopListingData.json
@@ -29,3 +29,8 @@ In either case Output appears as:
 $ OriginalStore: SimilarStore1 SimilarStore2 SimilarStore3 SimilarStore4 SimilarStore5
 ```
 I have included my ```shopListingData.json multipliers.json vectors.json``` in this repository.  
+
+Another version of this code loops over all the stores and produces an output file with all the shops.  To run it use:
+```bash
+$ python findSimilarShopsAllShops.py multiplier.json vectors.json similarShopsOutput.dat
+```

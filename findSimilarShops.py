@@ -104,6 +104,7 @@ def main(jsonInputForMultiplier, jsonInputFileForVectors, originalShop = ""):
             #don't waste your time calculating self distance
             continue
 
+        dist = 0
         for typeVec in typesOfVectors:
             #there are len(typesOfVectors) different "length" vectors to calculate
             dist+=vectorClasses[typeVec].calculateDistance(originalShop,shop)
@@ -115,9 +116,9 @@ def main(jsonInputForMultiplier, jsonInputFileForVectors, originalShop = ""):
     
     sortedDist = sorted(distances, key=lambda t: t[1])
     #sort on second element of tuple
-    stringToPrint = originalShop+ ":"
-    for i in range(nSimilarStores):
-        stringToPrint += " " + sortedDist[i][0]
+    stringToPrint = originalShop+ ": " + sortedDist[0][0]
+    for i in range(1,nSimilarStores):
+        stringToPrint += ", " + sortedDist[i][0]
 
     #print out the string starting with original store then : then nSimilarStores number of similar stores
     print stringToPrint
