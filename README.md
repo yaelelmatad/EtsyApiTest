@@ -40,7 +40,7 @@ $ python getShopsShopInfo.py shopListingData.json shopData.json
 ```
 I have also written another routine which reduces the apparent vector distance between two shops if the comparison ship is more popular (has more favorers).  The maximum bonus is about 10% of the vector distance with most shops getting almost no bonus at all.  To run that script use:
 ```bash
-$ python findSimilarShopsALlShops.py multipliers.json vectors.json storeData.json similarShopsByPopularity.dat
+$ python findSimilarShopsALlShopsByPopularity.py multipliers.json vectors.json storeData.json similarShopsByPopularity.dat
 ```
 
 I have further included ```storeData.json, ``` and ```similarShopsByPopularity.dat``` with this repository.

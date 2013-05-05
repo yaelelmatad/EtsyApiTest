@@ -142,7 +142,7 @@ def usage():
     sys.stderr.write("""
     given a multiplier.json and a shopvectors.json goes through ALL the stores and finds the five most similar stores. This version also gives stores that are more popular a bonus.  Avg distance 0.3. Stores can reduce the distance to current store by up to 0.05 if they have most favorers of the list.  If there are no favorers, there is no distance reduction.
     \n Third argument should be output file you want to write to like "similarShops.dat" for example you might use: \n
-    python findSimilarShopsALlShops.py multiplier.json vectors.json storeData.json similarShopsByPopularity.dat
+    python findSimilarShopsALlShopsByPopularity.py multiplier.json vectors.json storeData.json similarShopsByPopularity.dat
     \n""")
 
 if __name__ == "__main__":
