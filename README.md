@@ -24,4 +24,7 @@ Or (with known store name):
 ```bash
 $python findSimilarShops.py multipliers.json vectors.json VintageIngenue
 ```
-
+In either case Output appears as:
+```bash
+$OriginalStore: SimilarStore1 SimilarStore2 SimilarStore3 SimilarStore4 SimilarStore5
+```
