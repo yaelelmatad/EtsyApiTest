@@ -5,7 +5,7 @@ import time
 
 def main(goalNumShops, jsonListingOutput):
     '''simple script to find goalNumShops number of shops from the etsy API, outputs shop listing data in json format'''
-    api = Etsy('6hy9gw6rl7wbi4yklg3ezfx6', etsy_env=EtsyEnvSandbox())
+    api = Etsy('6hy9gw6rl7wbi4yklg3ezfx6', etsy_env=EtsyEnvProduction())
     myNumShops = 0
 
     myShops = [] #list of shops
